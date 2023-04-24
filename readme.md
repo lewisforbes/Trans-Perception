@@ -14,5 +14,7 @@ This lead to the following summary of results:
 | ----------- | ----------- | ------ | ------|
 |Trans Man|19%|20|4.4|
 | Trans Woman   |70%|11 | 1.5|
+34478 Tweets were pulled.
+
 
 The raw data `raw_results.csv` is created with `main-scraper.py` and the full results `overview.txt` are created with `main-analyser.py`.
