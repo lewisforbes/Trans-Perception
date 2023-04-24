@@ -16,6 +16,6 @@ def output(ts, init):
         line = line[:-1] + "\n"
         output += line
     
-    f = open("output.csv", "a")
+    f = open("raw_results.csv", "a", encoding="utf-8")
     f.write(output)
     f.close()

@@ -14,14 +14,14 @@ class Tweet:
         output = ""
         prefixes = ["trans", "trans ", "transgender "]
         current = "M"
-        for gender in [["man", "men", "boy", "boys"], ["woman", "women", "girl", "girls"]]:
+        for gender in [["man", "men"], ["woman", "women"]]:
             for prefix in prefixes:
                 for suffix in gender:
                     if (prefix + suffix) in text:
                         output += current
             current = "F"
         if output=="":
-            return "None"
+            raise Exception("no keyword found in text (ID={}): {}".format(self.id, text))
         if "M" in output and "F" in output:
             return "Both"
         if "M" in output:

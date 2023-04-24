@@ -8,7 +8,7 @@ import tweepy
 # bearer token=.....
 
 def get_creds(filename="creds.txt"):
-    f = open(".creds.txt", "r")
+    f = open("creds.txt", "r")
     creds = []
     for line in f:
             if len(line)<5: # skip last line if empty
