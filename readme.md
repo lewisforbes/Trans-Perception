@@ -2,6 +2,8 @@
 
 This project collects tweets and compares the prevelence of discussion about trans women vs that of trans men. 
 
+**Content warning**: the tweets in `raw_results.csv` are unmoderated and many are transphobic.
+
 The Twitter API was used to query recent Tweets matching the following keywords:
 - trans man/men
 - transgender man/men
