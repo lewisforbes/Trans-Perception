@@ -15,12 +15,13 @@ def go(init, goal):
     q = "(\"trans men\" OR \"trans man\" OR \"transgender men\" OR \"transgender man\" OR \"trans women\" OR \"trans woman\" OR \"transgender women\" OR \"transgender woman\") -is:retweet"
     api = get_api_v2()
     count = 0
-    for resp in tweepy.Paginator(api.search_recent_tweets, q, limit=5000, tweet_fields=["author_id", "created_at", "public_metrics"], sort_order="relevancy"):
+    for resp in tweepy.Paginator(api.search_recent_tweets, q, tweet_fields=["author_id", "created_at", "public_metrics"], sort_order="recency", max_results=100):
         count+=1
-        if count%10==0:
-            if tweets_so_far()>=goal:
+        if count%50==0:
+            tsf=tweets_so_far()
+            if tsf>=goal:
                 return
-            print(count)
+            print("tweets so far: {}/{}".format(tsf, goal))
             time.sleep(15*60)
         tweets = []
         for t in resp.data:
@@ -28,9 +29,12 @@ def go(init, goal):
             tweets.append(Tweet.Tweet(t.id, t.created_at, t.text, t.author_id, metrics["like_count"], metrics["retweet_count"]))
         outputter.output(tweets, init)
         init=False
+    print("returned")
+    return
+    
 
-
-goal=100
+print("start")
+goal=30000
 init=True
 while init or tweets_so_far()<goal:
     try:
@@ -38,5 +42,5 @@ while init or tweets_so_far()<goal:
         init=False
     except:
         print("error")
-        time.sleep(60)
+        time.sleep(5*60)
 print("Finished")

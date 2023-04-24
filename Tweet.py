@@ -21,7 +21,7 @@ class Tweet:
                         output += current
             current = "F"
         if output=="":
-            raise Exception("no keyword found in text (ID={}): {}".format(self.id, text))
+            return "None"
         if "M" in output and "F" in output:
             return "Both"
         if "M" in output:
