@@ -1,4 +1,4 @@
-# Perception of Trans Women vs Trans Men on Twitter
+# Discussion of Trans Women vs Trans Men on Twitter
 
 This project collects tweets and compares the prevelence of discussion about trans women vs that of trans men. 
 
