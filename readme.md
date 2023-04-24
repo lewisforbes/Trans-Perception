@@ -8,13 +8,11 @@ The Twitter API was used to query recent Tweets matching the following keywords:
 - trans woman/women
 - transgender woman/women
 
-This lead to the following summary of results:
+This lead to the following summary of results from the 34478 Tweets pulled:
 
 | Gender      | Mentions in Tweets| Average Likes per Tweet | Average Retweets per Tweet |
 | ----------- | ----------- | ------ | ------|
 |Trans Man|19%|20|4.4|
 | Trans Woman   |70%|11 | 1.5|
-34478 Tweets were pulled.
-
 
 The raw data `raw_results.csv` is created with `main-scraper.py` and the full results `overview.txt` are created with `main-analyser.py`.
