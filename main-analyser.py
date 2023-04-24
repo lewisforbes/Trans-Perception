@@ -1,4 +1,4 @@
-file = open("output.csv", "r",  encoding="utf-8")
+file = open("raw_results.csv", "r",  encoding="utf-8")
 total = [0,0,0]
 m = [0,0,0] 
 f = [0,0,0]

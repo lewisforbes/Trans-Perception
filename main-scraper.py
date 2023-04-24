@@ -3,7 +3,6 @@ import tweepy
 import outputter
 import time
 import Tweet
-import math
 
 def tweets_so_far():
     with open("raw_results.csv", 'r', encoding="utf-8") as fp:
