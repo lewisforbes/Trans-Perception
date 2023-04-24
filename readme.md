@@ -12,7 +12,7 @@ This lead to the following summary of results from the 34478 Tweets pulled:
 
 | Gender      | Mentions in Tweets| Average Likes per Tweet | Average Retweets per Tweet |
 | ----------- | ----------- | ------ | ------|
-|Trans Man|19%|20|4.4|
-| Trans Woman   |70%|11 | 1.5|
+|Men|19%|20|4.4|
+| Women   |70%|11 | 1.5|
 
 The raw data `raw_results.csv` is created with `main-scraper.py` and the full results `overview.txt` are created with `main-analyser.py`.
