@@ -22,7 +22,7 @@ def go(init, goal):
             if tsf>=goal:
                 return
             print("tweets so far: {}/{}".format(tsf, goal))
-            time.sleep(15*60)
+            time.sleep(15*60) # rate limit 
         tweets = []
         for t in resp.data:
             metrics = t.public_metrics
@@ -41,6 +41,6 @@ while init or tweets_so_far()<goal:
         go(init, goal)
         init=False
     except:
-        print("error")
+        print("error") # API unavailable at this tier (not personal rate limit)
         time.sleep(5*60)
 print("Finished")
