@@ -25,4 +25,4 @@ This led to the following summary of results from the 34478 Tweets pulled:
 
 The raw data [`raw_results.csv`](/raw_results.csv) is created with [`main-scraper.py`](/main-scraper.py) and the full results [`overview.txt`](/overview.txt) are created with [`main-analyser.py`](/main-analyser.py).
 
-*These terms [should not be used](https://www.glaad.org/reference/trans-terms). 'Trans' is an adjective which can modify a gender - using 'trans(wo)man' can imply that trans (wo)men are not (wo)men. 
+\*These terms [should not be used](https://www.glaad.org/reference/trans-terms). 'Trans' is an adjective which can modify a gender - using 'trans(wo)man' and not 'trans (wo)man' can imply that trans (wo)men are not (wo)men. 
