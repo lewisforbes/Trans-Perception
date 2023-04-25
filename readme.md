@@ -10,6 +10,12 @@ The Twitter API was used to query recent Tweets matching the following keywords:
 - trans woman/women
 - transgender woman/women
 
+A Tweet was classified (case-insensitively) as...
+- ...*M* if it contained any of the first two queries, as well as "transman" or "transmen".
+- ...*F* if it contained any of the final two queries, as well as "transwoman" or "transwomen".
+- ...*Both* if it could be classified as both *M* and *F*.
+- ...*None* if it could be classified as neither *M* or *F*.
+
 This led to the following summary of results from the 34478 Tweets pulled:
 
 | Gender      | Mentions in Tweets| Average Likes per Tweet | Average Retweets per Tweet |
